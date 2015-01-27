@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -254,8 +254,8 @@
 <smd name="GND" x="3.746" y="0" dx="1.27" dy="1.016" layer="1"/>
 </package>
 <package name="SOLDER_JUMPER">
-<smd name="P$1" x="0.4064" y="0" dx="1.27" dy="0.635" layer="1" roundness="50" rot="R90"/>
-<smd name="P$2" x="-0.4064" y="0" dx="1.27" dy="0.635" layer="1" roundness="50" rot="R90"/>
+<smd name="P$1" x="0.4064" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
+<smd name="P$2" x="-0.4064" y="0" dx="1.27" dy="0.635" layer="1" rot="R90"/>
 <text x="0" y="0.762" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.762" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -297,8 +297,8 @@
 <wire x1="-0.7874" y1="0.3937" x2="-0.7874" y2="-0.3937" width="0.0127" layer="51" style="dashdot"/>
 <wire x1="-0.7874" y1="0.3937" x2="0.8001" y2="0.3937" width="0.0127" layer="51" style="dashdot"/>
 <wire x1="-0.7874" y1="-0.3937" x2="0.8001" y2="-0.3937" width="0.0127" layer="51" style="dashdot"/>
-<text x="-1.397" y="0.762" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-1.397" y="-1.651" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-1.397" y="0.762" size="1.016" layer="25">&gt;NAME</text>
+<text x="-1.397" y="-1.778" size="1.016" layer="27">&gt;VALUE</text>
 <smd name="P$1" x="-0.762" y="0" dx="0.889" dy="0.889" layer="1" roundness="25"/>
 </package>
 <package name="RELAI-SONGLE-SRD">
@@ -806,8 +806,8 @@ Source: DCJ0303.pdf</description>
 <wire x1="1.9" y1="1.8" x2="1.9" y2="-1.8" width="0.127" layer="21"/>
 <wire x1="1.9" y1="-1.8" x2="-1.9" y2="-1.8" width="0.127" layer="21"/>
 <wire x1="-1.9" y1="-1.8" x2="-1.9" y2="1.8" width="0.127" layer="21"/>
-<text x="-1.778" y="2.286" size="0.8128" layer="21" align="center-left">&gt;NAME</text>
-<text x="-1.778" y="-2.286" size="0.8128" layer="21" align="center-left">&gt;VALUE</text>
+<text x="0" y="2.032" size="1.27" layer="21" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.032" size="1.27" layer="21" align="top-center">&gt;VALUE</text>
 </package>
 <package name="TQFP32">
 <description>&lt;B&gt;Thin Plasic Quad Flat Package&lt;/B&gt; Grid 0.8 mm</description>
@@ -959,9 +959,18 @@ Source: DCJ0303.pdf</description>
 <wire x1="-0.8" y1="1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
 <wire x1="-1.5" y1="0.8" x2="-0.8" y2="1.5" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="0.6" width="0.127" layer="21"/>
-<text x="-1.524" y="1.651" size="1.016" layer="27">Si7021</text>
-<text x="-1.524" y="-2.667" size="1.016" layer="25">&gt;NAME</text>
+<text x="-1.524" y="1.651" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-1.524" y="-2.921" size="1.27" layer="25">&gt;NAME</text>
 <circle x="-1.778" y="1.778" radius="0.254" width="0.127" layer="21"/>
+</package>
+<package name="CONN-1-2.54">
+<pad name="2" x="0" y="0" drill="0.8" diameter="1.5" rot="R90"/>
+<wire x1="1.143" y1="-1.27" x2="1.143" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.143" y1="1.27" x2="-1.143" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.143" y1="1.27" x2="-1.143" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-1.143" y1="-1.27" x2="1.143" y2="-1.27" width="0.127" layer="21"/>
+<text x="0" y="-1.397" size="0.8128" layer="25" rot="R180" align="bottom-center">&gt;NAME</text>
+<text x="0" y="1.397" size="0.8128" layer="25" align="bottom-center">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -1081,8 +1090,8 @@ Source: DCJ0303.pdf</description>
 <wire x1="-1.27" y1="-0.635" x2="-1.27" y2="0.635" width="0.254" layer="94"/>
 <pin name="P$1" x="-3.81" y="0" visible="off" length="short"/>
 <pin name="P$2" x="3.81" y="0" visible="off" length="short" rot="R180"/>
-<text x="-1.524" y="0.889" size="1.778" layer="95">&gt;NAME</text>
-<text x="-1.524" y="-2.667" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-1.524" y="0.889" size="1.4224" layer="95">&gt;NAME</text>
+<text x="-1.524" y="-2.413" size="1.4224" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="C">
 <wire x1="-0.508" y1="1.27" x2="-0.508" y2="0" width="0.508" layer="94"/>
@@ -1090,8 +1099,8 @@ Source: DCJ0303.pdf</description>
 <wire x1="0.508" y1="-1.27" x2="0.508" y2="0" width="0.508" layer="94"/>
 <pin name="P$1" x="-3.81" y="0" visible="off" length="short"/>
 <pin name="P$2" x="3.81" y="0" visible="off" length="short" rot="R180"/>
-<text x="-1.524" y="1.651" size="1.27" layer="95">&gt;NAME</text>
-<text x="-1.524" y="-3.048" size="1.27" layer="96">&gt;VALUE</text>
+<text x="-1.524" y="1.651" size="1.4224" layer="95">&gt;NAME</text>
+<text x="-1.524" y="-3.048" size="1.4224" layer="96">&gt;VALUE</text>
 <wire x1="0.508" y1="0" x2="0.508" y2="1.27" width="0.508" layer="94"/>
 <wire x1="-1.27" y1="0" x2="-0.508" y2="0" width="0.1524" layer="94"/>
 <wire x1="1.27" y1="0" x2="0.508" y2="0" width="0.1524" layer="94"/>
@@ -1527,13 +1536,13 @@ Source: DCJ0303.pdf</description>
 <wire x1="-3.81" y1="-3.81" x2="3.81" y2="-3.81" width="0.254" layer="94"/>
 <wire x1="3.81" y1="-3.81" x2="3.81" y2="3.81" width="0.254" layer="94"/>
 <wire x1="3.81" y1="3.81" x2="-3.81" y2="3.81" width="0.254" layer="94"/>
-<text x="-3.81" y="2.54" size="1.016" layer="94" align="center-left">Vdd</text>
-<text x="-3.81" y="0" size="1.016" layer="94" align="center-left">Vdd io</text>
-<text x="-3.81" y="-2.54" size="1.016" layer="94" align="center-left">GND</text>
-<text x="3.81" y="1.27" size="1.016" layer="94" rot="R180" align="center-left">scl</text>
-<text x="3.81" y="-1.27" size="1.016" layer="94" rot="R180" align="center-left">sda</text>
-<text x="-2.54" y="4.572" size="0.8128" layer="94" align="center-left">&gt;NAME</text>
-<text x="-2.54" y="-4.572" size="0.8128" layer="94" align="center-left">&gt;VALUE</text>
+<text x="-3.302" y="2.54" size="1.016" layer="94" align="center-left">Vdd</text>
+<text x="-3.556" y="0" size="1.016" layer="94" align="center-left">Vdd io</text>
+<text x="-3.556" y="-2.54" size="1.016" layer="94" align="center-left">GND</text>
+<text x="3.556" y="1.27" size="1.016" layer="94" rot="R180" align="center-left">SCL</text>
+<text x="3.556" y="-1.27" size="1.016" layer="94" rot="R180" align="center-left">SDA</text>
+<text x="0" y="4.064" size="1.27" layer="94" align="bottom-center">&gt;NAME</text>
+<text x="0.254" y="-4.318" size="1.27" layer="94" align="top-center">BMP180</text>
 </symbol>
 <symbol name="ATMEGA328-32">
 <wire x1="-19.05" y1="31.75" x2="19.05" y2="31.75" width="0.254" layer="94"/>
@@ -1608,20 +1617,30 @@ Source: DCJ0303.pdf</description>
 <pin name="PC6(/RESET)" x="-24.13" y="29.21" length="middle" function="dot"/>
 </symbol>
 <symbol name="SI7021">
-<pin name="SCL" x="7.62" y="1.27" visible="off" length="short" rot="R180"/>
-<pin name="SDA" x="7.62" y="-2.54" visible="off" length="short" rot="R180"/>
-<pin name="GND" x="0" y="-8.89" visible="off" length="short" rot="R90"/>
-<pin name="VCC" x="0" y="7.62" visible="off" length="short" rot="R270"/>
-<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="5.08" x2="5.08" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-6.35" x2="-5.08" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-6.35" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
-<text x="1.27" y="6.35" size="1.27" layer="94">&gt;NAME</text>
-<text x="-3.81" y="2.54" size="1.27" layer="94" rot="R270">Si7021</text>
-<text x="4.826" y="1.778" size="1.016" layer="94" rot="R180">SCL</text>
-<text x="4.826" y="-2.032" size="1.016" layer="94" rot="R180">SDA</text>
-<text x="1.524" y="-4.826" size="1.016" layer="94" rot="R180">GND</text>
-<text x="1.524" y="4.572" size="1.016" layer="94" rot="R180">VCC</text>
+<pin name="SCL" x="6.35" y="1.27" visible="off" length="short" rot="R180"/>
+<pin name="SDA" x="6.35" y="-1.27" visible="off" length="short" rot="R180"/>
+<pin name="GND" x="-6.35" y="-1.27" visible="off" length="short"/>
+<pin name="VCC" x="-6.35" y="1.27" visible="off" length="short"/>
+<wire x1="-3.81" y1="3.81" x2="3.81" y2="3.81" width="0.254" layer="94"/>
+<wire x1="3.81" y1="3.81" x2="3.81" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-3.81" x2="-3.81" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-3.81" x2="-3.81" y2="3.81" width="0.254" layer="94"/>
+<text x="-3.048" y="4.064" size="1.27" layer="94">&gt;NAME</text>
+<text x="-2.794" y="-5.334" size="1.27" layer="94">&gt;VALUE</text>
+<text x="3.556" y="1.778" size="1.016" layer="94" rot="R180">SCL</text>
+<text x="3.556" y="-0.762" size="1.016" layer="94" rot="R180">SDA</text>
+<text x="-3.556" y="-1.778" size="1.016" layer="94">GND</text>
+<text x="-3.556" y="0.762" size="1.016" layer="94">VCC</text>
+</symbol>
+<symbol name="CONN-1">
+<pin name="1" x="-5.08" y="0" visible="off" length="short"/>
+<wire x1="-2.413" y1="-1.27" x2="-2.413" y2="1.27" width="0.127" layer="94"/>
+<wire x1="-2.413" y1="1.27" x2="-0.127" y2="1.27" width="0.127" layer="94"/>
+<wire x1="-0.127" y1="1.27" x2="-0.127" y2="-1.27" width="0.127" layer="94"/>
+<wire x1="-0.127" y1="-1.27" x2="-2.413" y2="-1.27" width="0.127" layer="94"/>
+<text x="-2.54" y="1.778" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-2.794" size="1.27" layer="96">&gt;VALUE</text>
+<circle x="-1.27" y="0" radius="0.762" width="0.127" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2416,7 +2435,7 @@ Flash</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SI7021" prefix="U">
+<deviceset name="SI7021" prefix="U" uservalue="yes">
 <gates>
 <gate name="U1" symbol="SI7021" x="0" y="0"/>
 </gates>
@@ -2427,6 +2446,21 @@ Flash</description>
 <connect gate="U1" pin="SCL" pad="SCL"/>
 <connect gate="U1" pin="SDA" pad="SDA"/>
 <connect gate="U1" pin="VCC" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN-1" prefix="J">
+<gates>
+<gate name="J1" symbol="CONN-1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="CONN-1-2.54">
+<connects>
+<connect gate="J1" pin="1" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>

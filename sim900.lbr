@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -201,6 +201,8 @@
 <pin name="STATUS" x="-15.24" y="40.64" length="middle" rot="R270"/>
 <pin name="GPIO11" x="-17.78" y="40.64" length="middle" rot="R270"/>
 <pin name="GPIO12" x="-20.32" y="40.64" length="middle" rot="R270"/>
+<pin name="VBAT" x="12.7" y="40.64" length="middle" rot="R270"/>
+<pin name="GND" x="-27.94" y="-40.64" length="middle" rot="R90"/>
 </symbol>
 <symbol name="GND">
 <text x="2.54" y="0" size="1.27" layer="95" font="vector" rot="R90">GND</text>
@@ -215,24 +217,6 @@
 <deviceset name="SIM900" prefix="IC">
 <gates>
 <gate name="G$1" symbol="SIM900" x="-22.86" y="2.54" addlevel="must"/>
-<gate name="GND@1" symbol="GND" x="25.4" y="27.94" addlevel="request"/>
-<gate name="GND@2" symbol="GND" x="30.48" y="27.94" addlevel="request"/>
-<gate name="GND@3" symbol="GND" x="35.56" y="27.94" addlevel="request"/>
-<gate name="GND@4" symbol="GND" x="40.64" y="27.94" addlevel="request"/>
-<gate name="GND@5" symbol="GND" x="45.72" y="27.94" addlevel="request"/>
-<gate name="GND@6" symbol="GND" x="50.8" y="27.94" addlevel="request"/>
-<gate name="GND@7" symbol="GND" x="25.4" y="20.32" addlevel="request"/>
-<gate name="GND@8" symbol="GND" x="30.48" y="20.32" addlevel="request"/>
-<gate name="GND@9" symbol="GND" x="35.56" y="20.32" addlevel="request"/>
-<gate name="GND@10" symbol="GND" x="40.64" y="20.32" addlevel="request"/>
-<gate name="GND@11" symbol="GND" x="45.72" y="20.32" addlevel="request"/>
-<gate name="GND@12" symbol="GND" x="50.8" y="20.32" addlevel="request"/>
-<gate name="GND@13" symbol="GND" x="25.4" y="12.7" addlevel="request"/>
-<gate name="GND@14" symbol="GND" x="30.48" y="12.7" addlevel="request"/>
-<gate name="GND@15" symbol="GND" x="35.56" y="12.7" addlevel="request"/>
-<gate name="VBAT@1" symbol="VBAT" x="27.94" y="2.54" addlevel="request"/>
-<gate name="VBAT@2" symbol="VBAT" x="27.94" y="0" addlevel="request"/>
-<gate name="VBAT@3" symbol="VBAT" x="27.94" y="-2.54" addlevel="request"/>
 </gates>
 <devices>
 <device name="" package="SIM900">
@@ -248,6 +232,7 @@
 <connect gate="G$1" pin="DISP_DATA" pad="12"/>
 <connect gate="G$1" pin="DSR" pad="6"/>
 <connect gate="G$1" pin="DTR" pad="3"/>
+<connect gate="G$1" pin="GND" pad="17 18 29 39 45 46 53 54 58 59 61 62 63 64 65"/>
 <connect gate="G$1" pin="GPIO1/KBR4" pad="40"/>
 <connect gate="G$1" pin="GPIO10/KBC0" pad="51"/>
 <connect gate="G$1" pin="GPIO11" pad="67"/>
@@ -285,26 +270,9 @@
 <connect gate="G$1" pin="SPK_P" pad="21"/>
 <connect gate="G$1" pin="STATUS" pad="66"/>
 <connect gate="G$1" pin="TXD" pad="9"/>
+<connect gate="G$1" pin="VBAT" pad="55 56 57"/>
 <connect gate="G$1" pin="VDD_EXT" pad="15"/>
 <connect gate="G$1" pin="VRTC" pad="26"/>
-<connect gate="GND@1" pin="GND" pad="17"/>
-<connect gate="GND@10" pin="GND" pad="59"/>
-<connect gate="GND@11" pin="GND" pad="61"/>
-<connect gate="GND@12" pin="GND" pad="62"/>
-<connect gate="GND@13" pin="GND" pad="63"/>
-<connect gate="GND@14" pin="GND" pad="64"/>
-<connect gate="GND@15" pin="GND" pad="65"/>
-<connect gate="GND@2" pin="GND" pad="18"/>
-<connect gate="GND@3" pin="GND" pad="29"/>
-<connect gate="GND@4" pin="GND" pad="39"/>
-<connect gate="GND@5" pin="GND" pad="45"/>
-<connect gate="GND@6" pin="GND" pad="46"/>
-<connect gate="GND@7" pin="GND" pad="53"/>
-<connect gate="GND@8" pin="GND" pad="54"/>
-<connect gate="GND@9" pin="GND" pad="58"/>
-<connect gate="VBAT@1" pin="VBAT" pad="55"/>
-<connect gate="VBAT@2" pin="VBAT" pad="56"/>
-<connect gate="VBAT@3" pin="VBAT" pad="57"/>
 </connects>
 <technologies>
 <technology name=""/>

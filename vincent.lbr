@@ -1470,7 +1470,8 @@ Source: DCJ0303.pdf</description>
 <text x="-1.27" y="29.718" size="1.27" layer="21" rot="R270" align="center-left">SD_MOSI</text>
 <text x="1.27" y="29.718" size="1.27" layer="21" rot="R270" align="center-left">SD_MISO</text>
 <text x="3.81" y="29.718" size="1.27" layer="21" rot="R270" align="center-left">SD_SCK</text>
-</package><package name="DS1308_USOP">
+</package>
+<package name="DS1308_USOP">
 <smd name="7" x="-2.15" y="-0.325" dx="1.35" dy="0.4" layer="1"/>
 <smd name="8" x="-2.15" y="-0.975" dx="1.35" dy="0.4" layer="1"/>
 <smd name="6" x="-2.15" y="0.325" dx="1.35" dy="0.4" layer="1"/>
@@ -1499,6 +1500,16 @@ Source: DCJ0303.pdf</description>
 <text x="-2.54" y="-2.159" size="1.016" layer="27">&gt;VALUE</text>
 <wire x1="-4.3" y1="0.4" x2="-3.2" y2="0.4" width="0.2" layer="21"/>
 <wire x1="-4.3" y1="-0.4" x2="-3.2" y2="-0.4" width="0.2" layer="21"/>
+</package>
+<package name="CR2032_PCB_HOLDER">
+<circle x="0" y="0" radius="10.511896875" width="0.127" layer="21"/>
+<wire x1="4.5" y1="14.5" x2="-4.5" y2="14.5" width="0.127" layer="21"/>
+<wire x1="-4.5" y1="14.5" x2="-4.5" y2="9.5" width="0.127" layer="21"/>
+<wire x1="4.5" y1="14.5" x2="4.5" y2="9.5" width="0.127" layer="21"/>
+<pad name="+" x="0" y="11.5" drill="1.2"/>
+<pad name="-" x="0" y="-8.5" drill="1.2"/>
+<text x="-3" y="5.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3" y="3" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -3010,10 +3021,19 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <gate name="B1" symbol="BATTERIE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="CONN-2-2.54">
+<device name="PINS" package="CONN-2-2.54">
 <connects>
 <connect gate="B1" pin="+" pad="1"/>
 <connect gate="B1" pin="-" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CR2032" package="CR2032_PCB_HOLDER">
+<connects>
+<connect gate="B1" pin="+" pad="+"/>
+<connect gate="B1" pin="-" pad="-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -3613,12 +3633,6 @@ Socket for SIM cellular cards. Schematic element and footprint production proven
 </device>
 </devices>
 </deviceset>
-
-
-
-
-
-
 </devicesets>
 </library>
 </drawing>

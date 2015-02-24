@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -1535,6 +1535,21 @@ Source: DCJ0303.pdf</description>
 <smd name="8-NC" x="0" y="4.5" dx="1.6" dy="0.7" layer="1"/>
 <hole x="-10.7" y="4" drill="1"/>
 <hole x="-10.7" y="-4" drill="1"/>
+</package>
+<package name="SMD-7343+">
+<smd name="P+" x="3.374" y="0" dx="2.1" dy="4.3" layer="1" roundness="25"/>
+<wire x1="-4.64" y1="2.393" x2="-4.64" y2="-2.343" width="0.127" layer="21"/>
+<wire x1="-4.64" y1="-2.343" x2="4.69" y2="-2.343" width="0.127" layer="21"/>
+<wire x1="4.69" y1="-2.343" x2="4.69" y2="2.393" width="0.127" layer="21"/>
+<wire x1="4.69" y1="2.393" x2="-4.64" y2="2.393" width="0.127" layer="21"/>
+<wire x1="3.6629" y1="2.1501" x2="3.6629" y2="-2.1501" width="0.00761875" layer="51" style="dashdot"/>
+<wire x1="-3.6375" y1="2.1501" x2="-3.6375" y2="-2.1501" width="0.0127" layer="51" style="dashdot"/>
+<wire x1="-3.6375" y1="2.1501" x2="3.6629" y2="2.1501" width="0.0127" layer="51" style="dashdot"/>
+<wire x1="-3.6375" y1="-2.1501" x2="3.6629" y2="-2.1501" width="0.0127" layer="51" style="dashdot"/>
+<text x="0.01" y="2.524" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="-0.01" y="-2.487" size="0.8128" layer="27" rot="R180" align="bottom-center">&gt;VALUE</text>
+<smd name="P-" x="-3.374" y="0" dx="2.1" dy="4.3" layer="1" roundness="25"/>
+<wire x1="2.578" y1="2.224" x2="2.578" y2="-2.174" width="0.508" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -3185,6 +3200,15 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 </technologies>
 </device>
 <device name="SMD-0805+" package="SMD-0805+">
+<connects>
+<connect gate="C1" pin="P+" pad="P+"/>
+<connect gate="C1" pin="P-" pad="P-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SMD-7343+" package="SMD-7343+">
 <connects>
 <connect gate="C1" pin="P+" pad="P+"/>
 <connect gate="C1" pin="P-" pad="P-"/>
